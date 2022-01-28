@@ -9,17 +9,9 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const REDIRECT_URI = process.env.REDIRECT_URI;
 
-const generateRandomString = (length) => {
-  let text = "";
-  const possible =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+// import utils
+const { generateRandomString } = require('./utils')
 
-  for (let i = 0; i < length; i++) {
-    text += possible.charAt(Math.random() * possible.length);
-  }
-
-  return text;
-};
 
 const stateKey = "spotify_auth_state";
 
